@@ -1,0 +1,79 @@
+body{
+    min-height: 90vh;
+    // min-width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+$colors: #909090, #808080, #707070, #606060, #505050, #404040, #303030, #202020, #101010;
+
+.target-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  position: relative;
+
+  @for $i from 1 through length($colors) {
+    .ring-#{$i} {
+      content: '';
+      position: absolute;
+      width: #{(100 - $i * 10%)};
+      height: #{(100 - $i * 10%)};
+      background-color: nth($colors, $i);
+      border-radius: 50%;
+    //   z-index: #{length($colors) - $i + 1};
+    transition: all 0.5s;
+    transition-delay: #{$i+0.1}s;
+    opacity:0;
+    }
+  }
+}
+
+
+
+
+// // Define the number of arches
+// $arch-count: 5;
+
+// // Define the base size of the target board
+// $base-size: 200px;
+
+// // Define the colors for the arches
+// $arch-colors: #ffffff, #e6e6e6, #cccccc, #b3b3b3, #999999;
+
+// // Function to calculate the size of each arch
+// @function arch-size($index) {
+//   $size-step: $base-size / $arch-count;
+//   @return $base-size - ($index * $size-step);
+// }
+
+// // Function to get the color for each arch
+// @function arch-color($index) {
+//   @return nth($arch-colors, $index);
+// }
+
+// // Sass loop to generate the arches
+// .target-board {
+//   position: relative;
+//   width: $base-size;
+//   height: $base-size;
+//   border-radius: 50%;
+//   background-color: black;
+
+//   @for $i from 1 through $arch-count {
+//     &::before {
+//       content: '';
+//       position: absolute;
+//       top: ($i - 1) * ($base-size / $arch-count);
+//       left: ($i - 1) * ($base-size / $arch-count);
+//       width: arch-size($i);
+//       height: arch-size($i);
+//       border-radius: 50%;
+//       background-color: arch-color($i);
+//     }
+//   }
+// }

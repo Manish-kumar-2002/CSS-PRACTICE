@@ -1,0 +1,118 @@
+body {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.target-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  position: relative;
+}
+.target-board .ring-1 {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background-color: #909090;
+  border-radius: 50%;
+  transition: all 0.5s;
+  transition-delay: 1.1s;
+  opacity: 0;
+}
+.target-board .ring-2 {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background-color: #808080;
+  border-radius: 50%;
+  transition: all 0.5s;
+  transition-delay: 2.1s;
+  opacity: 0;
+}
+.target-board .ring-3 {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  background-color: #707070;
+  border-radius: 50%;
+  transition: all 0.5s;
+  transition-delay: 3.1s;
+  opacity: 0;
+}
+.target-board .ring-4 {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  background-color: #606060;
+  border-radius: 50%;
+  transition: all 0.5s;
+  transition-delay: 4.1s;
+  opacity: 0;
+}
+.target-board .ring-5 {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #505050;
+  border-radius: 50%;
+  transition: all 0.5s;
+  transition-delay: 5.1s;
+  opacity: 0;
+}
+.target-board .ring-6 {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  background-color: #404040;
+  border-radius: 50%;
+  transition: all 0.5s;
+  transition-delay: 6.1s;
+  opacity: 0;
+}
+.target-board .ring-7 {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background-color: #303030;
+  border-radius: 50%;
+  transition: all 0.5s;
+  transition-delay: 7.1s;
+  opacity: 0;
+}
+.target-board .ring-8 {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  background-color: #202020;
+  border-radius: 50%;
+  transition: all 0.5s;
+  transition-delay: 8.1s;
+  opacity: 0;
+}
+.target-board .ring-9 {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  background-color: #101010;
+  border-radius: 50%;
+  transition: all 0.5s;
+  transition-delay: 9.1s;
+  opacity: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
