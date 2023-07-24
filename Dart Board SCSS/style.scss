@@ -14,7 +14,7 @@ $colors: #909090, #808080, #707070, #606060, #505050, #404040, #303030, #202020,
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background-color: #f2f2f2;
+  // border: 2px solid #909080;
   position: relative;
 
   @for $i from 1 through length($colors) {
@@ -23,18 +23,59 @@ $colors: #909090, #808080, #707070, #606060, #505050, #404040, #303030, #202020,
       position: absolute;
       width: #{(100 - $i * 10%)};
       height: #{(100 - $i * 10%)};
-      background-color: nth($colors, $i);
+      border: 2px solid;
+      border-color: nth($colors, $i);
       border-radius: 50%;
     //   z-index: #{length($colors) - $i + 1};
-    transition: all 0.5s;
-    transition-delay: #{$i+0.1}s;
-    opacity:0;
+    // transition: all 0.5s;
+    // transition-delay: #{$i+0.1}s;
+    // opacity:0;
+    // animation:identifier 4s 20 alternate 2s;
+animation: rotate 10s linear infinite; 
+
+    }
+    .ring-1{
+      &::before{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #000;
+        border-radius: 50%;
+animation: orbit 5s linear infinite; 
+top: 149px;
+    left: 100px;
+      }
     }
   }
 }
+// @keyframes identifier {
+//   from{
+//     width: 10%;
+//     height: 10%;
+//     border-color: red;
+//   }
+  
+// }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-
+@keyframes orbit {
+  from {
+    transform: translateX(0) translateY(-130px); /* Adjust the distance from the center */
+  }
+  to {
+    transform: translateX(0) translateY(-130px) rotate(360deg); /* Adjust the distance and rotation */
+  }
+}
 
 // // Define the number of arches
 // $arch-count: 5;

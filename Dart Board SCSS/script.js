@@ -9,15 +9,15 @@ const createTargetBoard = (numRings) => {
     }
   };
   
+  
   createTargetBoard(9); // You can change the argument to create a different number of rings.
   function animateTarget() {
     const ring = document.querySelectorAll(".ring");
-    let delay = 100;
+    let delay = 10;
     ring.forEach((circle, index) => {
       setTimeout(() => {
         circle.style.opacity = "1";
       }, delay * index);
     });
   }
-
   animateTarget();
