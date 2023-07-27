@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #777;
+}
+.menu {
+  display: flex;
+  list-style: none;
+}
+.menu li {
+  margin-right: 25px;
+}
+.menu li.active {
+  background-color: #000;
+}
+.menu a {
+  color: #fff;
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 8px 20px;
+  display: inline-block;
+}

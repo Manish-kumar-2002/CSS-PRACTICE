@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menu active</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+   <nav class="navbar">
+    <div class="hamburger">
+      <span class="bar"></span>
+    </div>
+    <ul class="menu">
+      <li style="--i:1; --clr:#FC4F00"><a href="#">home</a></li>
+      <li style="--i:2; --clr:#E49393"><a href="#">services</a></li>
+      <li style="--i:3; --clr:#FFD93D"><a href="#">about</a></li>
+      <li style="--i:4; --clr:#3A98B9"><a href="#">gallery</a></li>
+      <li style="--i:5; --clr:#CD5888"><a href="#">testimonial</a></li>
+      <li style="--i:6; --clr:#A0C3D2"><a href="#">blog</a></li>
+      <li style="--i:7; --clr:#98A8F8"><a href="#">map</a></li>
+      <li style="--i:8; --clr:#3AB4F2"><a href="#">contact</a></li>
+    </ul>
+   </nav>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+  <script>
+    $(document).on("click", ".hamburger", function () {
+      $(this).toggleClass("active");
+      $('.menu').toggleClass("active");
+    });
+  </script>
+</html>
